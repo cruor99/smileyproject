@@ -4,6 +4,7 @@ export class Smileys{
     orgnummer: number;
     navn: string;
     adrlinje1: string;
+    adrlinje2: string;
     postnr: number;
     poststed: string;
     tilsynid: string;
