@@ -1,12 +1,15 @@
-<ul>
-    <li *ngFor="let thingy of smileys">
-        {{ thingy.dato }}
-        <br/>
-        {{ thingy.total_karakter}}
-        <br/>
-        {{ thingy.navn }}
-        <br/>
-        {{ thingy.adrlinje1 }}
-        <hr/>
-    </li>
-</ul>
+<div *ngFor="let thingy of smileys" class="col-sm-4">
+    <ul class="list-group">
+        <li class="list-group-item"> {{ thingy.dato}} </li>
+        <li class="list-group-item">
+            <div *ngIf="thingy.total_karakter == 0"><i class="material-icons">sentiment_very_satisfied</i></div>
+            <div *ngIf="thingy.total_karakter == 1"><i class="material-icons">sentiment_very_satisfied</i></div>
+            <div *ngIf="thingy.total_karakter == 2"><i class="material-icons">sentiment_neutral</i></div>
+            <div *ngIf="thingy.total_karakter == 3"><i class="material-icons">sentiment_neutral</i></div>
+            <div *ngIf="thingy.total_karakter == 4"><i class="material-icons">sentiment_dissatisfied</i></div>
+            <div *ngIf="thingy.total_karakter == 5"><i class="material-icons">sentiment_dissatisfied</i></div>
+        </li>
+        <li class="list-group-item">{{ thingy.navn }}</li>
+        <li class="list-group-item">{{ thingy.adrlinje1 }}</li>
+    </ul>
+</div>

@@ -22,6 +22,12 @@ export class SmileysService{
 
     private extractData(res: Response){
         let body = res.json();
+        for (let entry of body["entries"]){
+            let dato = entry.dato.match(/.{1,2}/g)
+            console.log(dato)
+            let newdato = new Date(dato[2]+dato[3], Number(dato[1])-1, dato[0]).toDateString();
+            entry.dato = newdato
+        }
         return body["entries"] || { };
     }
 

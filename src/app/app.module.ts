@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SmileysComponent } from './smileys.component'
 
+
 @NgModule({
   declarations: [
       AppComponent,
@@ -14,7 +15,7 @@ import { SmileysComponent } from './smileys.component'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+      HttpModule,
   ],
   providers: [],
     bootstrap: [AppComponent]

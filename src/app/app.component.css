@@ -1,3 +1,4 @@
-h1 {
-    background-color: #FF0000;
+.jumbotron {
+    background-color: red;
+    text-align: center;
 }
